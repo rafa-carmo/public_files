@@ -7,7 +7,7 @@ import Head from 'next/head'
 import theme from 'styles/theme'
 
 function App({ Component, pageProps }: AppProps) {
-  return 
+  return (
   <>
     <Head>
       <title>Home Page</title>
@@ -16,10 +16,12 @@ function App({ Component, pageProps }: AppProps) {
       <link rel="manifest" href="/manifest.json" />
       <meta name="description" content="A simple Page" />
     </Head>
+    <GlobalStyles />
     <ThemeProvider theme={theme}>
     <Component {...pageProps} />
     </ThemeProvider>
   </>
+)
 }
 
 export default App
